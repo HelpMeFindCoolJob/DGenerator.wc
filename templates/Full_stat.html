@@ -1,0 +1,62 @@
+﻿<!DOCTYPE>
+<html>
+	<head>
+		<title>Полная детализация</title>
+		<meta charset=utf-8>
+		<style>p{margin-bottom: 0.21cm;text-align: center}.title{font-size: 10pt;}</style>
+	</head>
+	<body>
+		<div id="client-title">
+			<p>
+				<img src="http://s017.radikal.ru/i433/1207/b9/e753d3cd75fa.jpg" width="763" height="97">
+			</p>
+			<p id="title-name" style="font-size: 11pt">
+				Полная детализация телефонных звонков для {{ name }}
+			</p>
+			<p id="title-period" style="font-size: 11pt">период - {{ period }}</p><p>&nbsp;</p>			
+			<p id="title-summary">
+				<strong>Общее количество соединений: {{ callsCount }}</strong>
+			</p></br>
+			<TABLE WIDTH="800" BORDER="0" align="center">
+			<TR VALIGN="top" class="title">
+				<TD style="width: 125px">
+					<P>Номер А</P>
+				</TD>
+				<TD style="width: 125px">
+					<P>Номер Б</P>
+				</TD>
+				<TD style="width: 140px">
+					<P>Дата</P>
+				</TD>
+				<TD style="width: 110px">
+					<P>Длительность</P>
+				</TD>
+				<TD style="width: 230px">
+					<P>Причина завершения</P>
+				</TD>
+			</TR>
+		</TABLE>
+		</div>
+		<TABLE WIDTH="800" BORDER="0" align="center" id="calls-table">			
+			{% for call in calls %}
+			<TR id="call-row" VALIGN="top" class="title">
+				<TD style="width: 125px">
+					<P>{{ call.numA }}</P>
+				</TD>
+				<TD style="width: 125px">
+					<P>{{ call.numB }}</P>
+				</TD>
+				<TD style="width: 140px">
+					<P>{{ call.date }}</P>
+				</TD>
+				<TD style="width: 110px">
+					<P>{{ call.duration }}</P>
+				</TD>
+				<TD style="width: 230px">
+					<P>{{ call.closeCode }}</P>
+				</TD>
+			</TR>
+			{% endfor %}	
+		</TABLE>
+	</body>
+</html>

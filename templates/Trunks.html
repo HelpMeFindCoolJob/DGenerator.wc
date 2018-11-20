@@ -1,0 +1,65 @@
+﻿<!DOCTYPE>
+<html>
+	<head>
+		<title>Информация по транкам {{ operator }}</title>
+		<meta charset=utf-8>
+		<style>p{margin-bottom: 0.21cm;text-align: center}.title{font-size: 10pt;}</style>
+	</head>
+	<body>
+		<div id="client-title">
+			<p>
+				<img src="http://s017.radikal.ru/i433/1207/b9/e753d3cd75fa.jpg" width="763" height="97">
+			</p>
+			<p id="title-name" style="font-size: 11pt">
+				Полная информация о телефонных соединениях, осуществленных через транки {{ operator }}
+			</p>
+			<p id="title-period" style="font-size: 11pt">период - {{ period }}</p><p>&nbsp;</p>			
+			<p id="title-summary">
+				<strong>Завершение вызовов и пропуск трафика Альтес-Р на сеть оператора {{ operator }}</strong>				
+			</p></br>
+			<TABLE WIDTH="800" BORDER="0" align="center">
+				<TR VALIGN="top" class="title">
+					<TD style="width: 125px">
+						<P>Общая длительность (мин)</P>
+					</TD>
+					<TD style="width: 125px">
+						<P>Количество соединений</P>
+					</TD>					
+				</TR>
+			</TABLE>
+			<TABLE WIDTH="800" BORDER="0" align="center" id="calls-table">	
+				<TR id="call-row" VALIGN="top" class="title">
+					<TD style="width: 125px">
+						<P>{{ toDuration }}</P>
+					</TD>
+					<TD style="width: 125px">
+						<P>{{ toCalls }}</P>
+					</TD>					
+				</TR>
+			</TABLE>
+			<p id="title-summary">
+				<strong>Завершение вызовов и пропуск трафика {{ operator }} на сеть Альтес-Р</strong>				
+			</p></br>			
+			<TABLE WIDTH="800" BORDER="0" align="center">
+				<TR VALIGN="top" class="title">
+					<TD style="width: 125px">
+						<P>Общая длительность (мин)</P>
+					</TD>
+					<TD style="width: 125px">
+						<P>Количество соединений</P>
+					</TD>					
+				</TR>
+			</TABLE>
+			<TABLE WIDTH="800" BORDER="0" align="center" id="calls-table">	
+				<TR id="call-row" VALIGN="top" class="title">
+					<TD style="width: 125px">
+						<P>{{ fromDuration }}</P>
+					</TD>
+					<TD style="width: 125px">
+						<P>{{ fromCalls }}</P>
+					</TD>					
+				</TR>
+			</TABLE>
+		</div>		
+	</body>
+</html>

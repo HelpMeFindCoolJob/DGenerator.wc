@@ -1,0 +1,1 @@
+powershell -Command "& {cls;python.exe C:\DGenerator\dgenerator.py}"
